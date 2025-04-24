@@ -4,6 +4,7 @@
   background: url("/public/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* Ensures the background is centered */
   color: white;
 }
 
@@ -13,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .landingPageContainer nav h2 {
@@ -25,7 +25,6 @@
   display: flex;
   gap: 1.6rem;
   cursor: pointer;
-
 }
 
 .landingMainContainer {
@@ -46,6 +45,11 @@
   padding: 1rem;
   border-radius: 20px;
   margin-top: 1.9rem;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button']:hover {
+  background: #D86C00; /* Darker orange on hover */
 }
 
 .landingMainContainer>div:nth-child(1) div[role='button'] a {
@@ -65,8 +69,8 @@
   justify-content: space-between;
   padding-inline: 20px;
   text-align: center;
-
 }
+
 .meetContainer {
   display: flex;
   padding-inline: 20px;
@@ -75,22 +79,176 @@
   justify-content: center;
 }
 
-
-
 .leftPanel {
   height: 100%;
   display: flex;
   align-items: center;
-
 }
 
 .rightPanel {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 .rightPanel > img {
   width: 30vw;
   height: auto;
   border-radius: 20px;
+  user-select: none;
+}
+
+.creative-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.creative-heading:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #2196F3, #4CAF50);
+}
+
+/* Adding hover effect for .navBar buttons */
+.navBar button:hover {
+  background-color: #4CAF50; /* Green button background on hover */
+  color: white; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+
+/* Styling for History button */
+.history-button {
+  background-color: #4CAF50; /* Green background for History */
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.history-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Styling for Logout button */
+.logout-button {
+  background-color: #f44336; /* Red background for Logout */
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.logout-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Adjusting spacing */
+.navBar .buttons {
+  display: flex;
+  gap: 1.5rem; /* Added space between History and Logout buttons */
+  align-items: center;
+}
+
+/* Title Styling */
+.title-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50; /* Dark Blue-Gray color */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0; /* Space around the title */
+  background: linear-gradient(to right, #4CAF50, #2196F3); /* Green to blue gradient */
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px; /* Spaced letters */
+  transition: transform 0.3s ease;
+}
+
+.title-heading:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  background: linear-gradient(to right, #2196F3, #4CAF50); /* Reverse gradient on hover */
+}
+
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem; /* Slightly larger for better visibility */
+  color: #7f8c8d; /* Light gray for subtle appearance */
+  font-family: 'Arial', sans-serif;
+  padding: 10px 0;
+  background-color: #ffffff; /* White background for the footer */
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  letter-spacing: 1px;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  color: #2c3e50; /* Dark text for contrast */
+  font-style: italic; /* Add italics for better styling */
+}
+
+.footer:hover {
+  background-color: #f1f1f1; /* Subtle background change on hover */
+  transform: translateY(-5px); /* Slightly lift the footer on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 15px; /* Rounded corners for the container */
+  
+}
+
+.navHeader h2 {
+  font-size: 2.5rem; /* Large text size for visibility */
+  font-weight: 700; /* Bold font for prominence */
+  color: #2c3e50; /* Dark color for contrast */
+  text-align: center;
+  text-transform: uppercase; /* Uppercase text for styling */
+  letter-spacing: 2px; /* Slightly spaced letters for a modern feel */
+  background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient effect from green to blue */
+  -webkit-background-clip: text; /* Apply background gradient to text */
+  color: transparent; /* Text color will be transparent so the background gradient shows */
+  padding: 10px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners for the text */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.navHeader h2:hover {
+  transform: scale(1.1); /* Slight zoom effect when hovered */
 }
