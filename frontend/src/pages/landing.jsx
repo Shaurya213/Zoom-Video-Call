@@ -7,15 +7,6 @@ export default function LandingPage() {
     const router = useNavigate();
 
     return (
-        <div className='landingPageContainer'>import React from 'react'
-import "../App.css"
-import { Link, useNavigate } from 'react-router-dom'
-export default function LandingPage() {
-
-
-    const router = useNavigate();
-
-    return (
         <div className='landingPageContainer'>
             <nav>
                 <div className='navHeader'>
@@ -63,3 +54,4 @@ export default function LandingPage() {
         </div>
     )
 }
+
